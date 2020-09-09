@@ -14,8 +14,34 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/first” -->
+                <data android:scheme="http"
+                    android:host="www.example.com"
+                    android:pathPrefix="/first" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "example://first” -->
+                <data android:scheme="example"
+                    android:host="first" />
+            </intent-filter>
         </activity>
-        <activity android:name=".SecondScreenActivity" />
+        <activity android:name=".SecondScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "example://second” -->
+                <data android:scheme="example"
+                    android:host="second" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
