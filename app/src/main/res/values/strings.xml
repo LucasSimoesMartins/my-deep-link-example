@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My deep link example</string>
+    <string name="second_screen">Go to second Screen</string>
+    <string name="third_screen">Go to third Screen</string>
+    <string name="the_deep_link_text_will_be_here">The deep link text will be here</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
